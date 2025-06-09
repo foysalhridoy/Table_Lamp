@@ -1,0 +1,100 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: #262525;
+}
+.container{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+/* Lamp Top */
+.lamp{
+    height: 0;
+    width: 220px;
+    border-bottom: 150px solid #4ac3a1da;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+}
+/* Lamp Stand */
+.lamp:before{
+    content: "";
+    position: absolute;
+    height: 82px;
+    width: 10px;
+    background-color: #ffffff;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 148px;
+    border-radius: 3px 3px 0 0;
+}
+/* Lamp Base */
+.lamp:after{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    background-color: #4ac3a1da;
+    top: 230px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 50px 50px 0 0;
+}
+/* Lamp Switch String */
+input{
+    appearance: none;
+    background-color: #fff29f;
+    height: 25px;
+    width: 5px;
+    position: absolute;
+    top: 149px;
+    left: 170px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+/* Lamp Switch String 2 */
+input:after{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #c0f792;
+    border-radius: 50%;
+    left: -5px;
+    bottom: -2px;
+}
+/* Light */
+input:before{
+    content: "";
+    position: absolute;
+    height: 132px;
+    width: 200px;
+    left: -188px;
+    z-index: -5;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+    transition: 0.5s;
+    pointer-events: none;
+}
+input:checked{
+    height: 40px;
+}
+input:checked:before{
+    background: linear-gradient(
+        #ffe79036,
+        #ffffff11
+    );
+}
